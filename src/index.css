@@ -1,3 +1,57 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto 0 auto;
+  padding: 0 1rem 0 1rem;
+}
+
+.notes-list {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.note {
+  background-color: lightpink;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
+  padding: 2rem;
+  border-radius: 2rem;
+}
+
+.note-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.new {
+  background-color: lightskyblue;
+}
+
+.new textarea {
+  background-color: lightskyblue;
+  border: none;
+  resize: none;
+}
+
+.new textarea:focus {
+  outline: none;
+}
+
+.new button {
+  border: none;
+  background-color: rgb(55, 172, 245);
+  padding: 6px 13px;
+  border-radius: 15px;
+}
+
+.new button:hover {
+  background-color: rgba(55, 172, 245, 0.7);
+  cursor: pointer;
+}
