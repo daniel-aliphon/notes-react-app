@@ -5,14 +5,21 @@ const AddNote = ({ handleAddNote }: any) => {
   //
   const [noteText, setNoteText] = useState("");
 
+  const remainingChars = 200 - noteText.length;
+
   //event parameter and event.target.value to capture input text
   const handleChange = (event: any) => {
-    setNoteText(event.target.value);
+    if (remainingChars > 0) {
+      setNoteText(event.target.value);
+    }
   };
 
   const handleSaveClick = () => {
-    //noteText will be sent back to app.tsx as a parameter for the prop
-    handleAddNote(noteText);
+    if (noteText.trim().length > 0) {
+      //noteText will be sent back to app.tsx as a parameter for the prop
+      handleAddNote(noteText);
+      setNoteText("");
+    }
   };
 
   return (
@@ -30,7 +37,7 @@ const AddNote = ({ handleAddNote }: any) => {
       ></textarea>
       {/* sectioing inside component container */}
       <div className="note-footer">
-        <small>200 Remaining</small>
+        <small>{remainingChars} Remaining</small>
         <button onClick={handleSaveClick}>Save</button>
       </div>
     </div>

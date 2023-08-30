@@ -1,7 +1,7 @@
 import AddNote from "./AddNote";
 import Note from "./Note";
 //passed props into function params (notes) from useState array of props
-const NotesList = ({ notes, handleAddNote }: any) => {
+const NotesList = ({ notes, handleAddNote, handleDeleteNote }: any) => {
   //                          ^
   //                      { props }
   return (
@@ -15,6 +15,7 @@ const NotesList = ({ notes, handleAddNote }: any) => {
           id={note.id}
           text={note.text}
           date={note.date}
+          handleDeleteNote={handleDeleteNote}
         />
       ))}
       {/* passed props to next component (AddNote component) */}

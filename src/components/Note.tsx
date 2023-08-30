@@ -1,5 +1,6 @@
 //props passed from NotesList are values of each respective note
-const Note = ({ id, text, date }: any) => {
+const Note = ({ id, text, date, handleDeleteNote }: any) => {
+  //
   return (
     // component for each newly created note
     <div
@@ -15,6 +16,8 @@ const Note = ({ id, text, date }: any) => {
         <img
           src="trash-x-filled.svg"
           alt="dark-filled-bin-icon"
+          className="delete"
+          onClick={() => handleDeleteNote(id)}
         />
       </div>
     </div>
