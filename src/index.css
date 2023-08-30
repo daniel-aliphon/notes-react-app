@@ -2,6 +2,7 @@
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
+  height: 100% !important;
 }
 
 body {
@@ -20,6 +21,7 @@ h1 {
   max-width: 960px;
   margin: 0 auto 0 auto;
   padding: 1rem 1rem 1rem 1rem;
+  min-height: 100vh;
 }
 
 .header {
@@ -134,4 +136,14 @@ h1 {
 .new button:hover {
   background-color: rgba(55, 172, 245, 0.7);
   cursor: pointer;
+}
+
+/* dark mode */
+.dark-mode {
+  background-color: black;
+  height: 100%;
+}
+
+.dark-mode h1 {
+  color: white;
 }
