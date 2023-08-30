@@ -36,7 +36,7 @@ h1 {
   border: none;
   background-color: rgb(227, 224, 224);
   height: 37px;
-  border-radius: 20px;
+  border-radius: 1rem;
   padding: 0 1rem;
 }
 
@@ -50,7 +50,7 @@ h1 {
   display: flex;
   padding: 5px;
   background-color: rgb(227, 224, 224);
-  border-radius: 15px;
+  border-radius: 1rem;
   min-width: calc(182px + 32px);
   align-items: center;
 }
@@ -82,13 +82,12 @@ h1 {
 }
 
 .note {
-  background-color: lightpink;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-height: 200px;
   padding: 2rem;
-  border-radius: 2rem;
+  border-radius: 1rem;
   /* keeps spacing(white-space) of text through any state */
   white-space: pre-wrap;
 
@@ -101,11 +100,20 @@ h1 {
   display: flex;
   align-items: center;
   justify-content: space-between;
+  border-radius: 15px;
+  background-color: rgb(242, 235, 235);
+  padding: 3px 7px;
 }
 
+.new-footer {
+  background-color: lightskyblue;
+}
+.delete {
+  opacity: 0.8;
+}
 .delete:hover {
   cursor: pointer;
-  opacity: 0.8;
+  opacity: 1;
 }
 
 .new {
@@ -140,10 +148,115 @@ h1 {
 
 /* dark mode */
 .dark-mode {
-  background-color: black;
+  background-color: rgb(30, 29, 29);
   height: 100%;
 }
 
 .dark-mode h1 {
   color: white;
+}
+
+.color-btn {
+  padding: 7px;
+  background-color: lightsalmon;
+  border: 1px solid black;
+  border-radius: 8px;
+}
+
+.color-btn:hover {
+  cursor: pointer;
+  padding: 9px;
+}
+
+.btn-pink {
+  background-color: rgb(255, 163, 177);
+}
+
+.btn-coral {
+  background-color: rgb(255, 71, 71);
+}
+.btn-orange {
+  background-color: rgb(254, 166, 131);
+}
+.btn-green {
+  background-color: rgb(148, 246, 148);
+}
+.btn-yellow {
+  background-color: rgb(255, 255, 159);
+}
+
+.pink {
+  background-color: rgb(255, 163, 177);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
+  padding: 2rem;
+  border-radius: 1rem;
+  /* keeps spacing(white-space) of text through any state */
+  white-space: pre-wrap;
+
+  /* prevents text overflow */
+  overflow-wrap: break-word;
+  /**/
+}
+.coral {
+  background-color: rgb(255, 88, 88);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
+  padding: 2rem;
+  border-radius: 1rem;
+  /* keeps spacing(white-space) of text through any state */
+  white-space: pre-wrap;
+
+  /* prevents text overflow */
+  overflow-wrap: break-word;
+  /**/
+}
+.orange {
+  background-color: rgb(254, 166, 131);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
+  padding: 2rem;
+  border-radius: 1rem;
+  /* keeps spacing(white-space) of text through any state */
+  white-space: pre-wrap;
+
+  /* prevents text overflow */
+  overflow-wrap: break-word;
+  /**/
+}
+.green {
+  background-color: rgb(148, 246, 148);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
+  padding: 2rem;
+  border-radius: 1rem;
+  /* keeps spacing(white-space) of text through any state */
+  white-space: pre-wrap;
+
+  /* prevents text overflow */
+  overflow-wrap: break-word;
+  /**/
+}
+.yellow {
+  background-color: rgb(255, 255, 159);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
+  padding: 2rem;
+  border-radius: 1rem;
+  /* keeps spacing(white-space) of text through any state */
+  white-space: pre-wrap;
+
+  /* prevents text overflow */
+  overflow-wrap: break-word;
+  /**/
 }

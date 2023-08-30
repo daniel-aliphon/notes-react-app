@@ -36,7 +36,7 @@ const AddNote = ({ handleAddNote }: any) => {
         value={noteText}
       ></textarea>
       {/* sectioing inside component container */}
-      <div className="note-footer">
+      <div className="note-footer new-footer">
         <small>{remainingChars} Remaining</small>
         <button onClick={handleSaveClick}>Save</button>
       </div>
