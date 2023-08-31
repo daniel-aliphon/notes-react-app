@@ -7,14 +7,28 @@ import Search from "./components/Search";
 
 function App() {
   //
-
+  //
+  //
+  //
+  //          DARK MODE
   const [darkMode, setDarkMode] = useState(false);
-
+  //
+  //
+  //
+  //
   //useState props in an array
   const [notes, setNotes] = useState([
-    { text: "This is my first note!", date: "09/07/2015", id: nanoid() },
+    {
+      text: "This is my first note!",
+      date: "09/07/2015",
+      id: nanoid(),
+    },
   ]);
-
+  //
+  //
+  //
+  //
+  //           STORING DATA
   useEffect(() => {
     //fetching data from local storage, .getItem( DATA KEY )
     const savedNotes = JSON.parse(
@@ -32,6 +46,11 @@ function App() {
     //setting notes data into local storage, DATA KEY-"react-notes-app-data"
     localStorage.setItem("react-notes-app-data", JSON.stringify(notes));
   }, [notes]);
+  //
+  //
+  //
+  //       ADDING A NEW NOTE & RENEWING ARRAY OF NOTES
+  //
   //pass function as prop to NotesList, (text) is the placeholder value
   const addNote = (text: string) => {
     const date = new Date();
@@ -42,27 +61,39 @@ function App() {
       //nanoid generates an id
       id: nanoid(),
     };
-
     //IMPORTANT! adds and saves newly created note to notes array, ... is used to copy current array of notes
     const newNotes = [...notes, newNote];
     //sets the notes array to ALL previously created notes
     setNotes(newNotes);
   };
   //
+  //
+  //
+  //       DELETING A NOTE
+  //
   const deleteNote = (id: any) => {
     const newNotes = notes.filter((note) => note.id !== id);
     setNotes(newNotes);
   };
-
+  //
+  //
+  //
+  //      SEARCH FOR A NOTE
   const [searchText, setSearchText] = useState("");
-
+  //
+  //
+  //
+  //
+  //
   return (
     <div className={darkMode === true ? "dark-mode" : ""}>
       <div className="container">
         <Header setDarkMode={setDarkMode} />
         <Search setSearchText={setSearchText} />
         {/* pass the props to NotesList component*/}
+
         <NotesList
+          // SEARCH FUNCTION
           notes={notes.filter((note) =>
             note.text
               .toLocaleLowerCase()

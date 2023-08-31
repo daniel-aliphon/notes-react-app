@@ -8,11 +8,13 @@
 body {
   margin: 0;
   padding: 0;
+  transition: background-color 1s ease-out;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+  transition: color 1s linear;
 }
 
 /**/
@@ -103,10 +105,26 @@ h1 {
   border-radius: 15px;
   background-color: rgb(242, 235, 235);
   padding: 3px 7px;
+  margin-top: 0.5rem;
 }
 
-.new-footer {
-  background-color: lightskyblue;
+.note-footer-visible {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 15px;
+  background-color: rgb(242, 235, 235);
+  padding: 3px 7px;
+  margin-top: 0.5rem;
+}
+
+.add-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 15px;
+  padding: 3px 7px;
+  margin-top: 0.5rem;
 }
 .delete {
   opacity: 0.8;
@@ -116,11 +134,23 @@ h1 {
   opacity: 1;
 }
 
-.new {
+.add-note {
   background-color: lightskyblue;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 200px;
+  padding: 2rem;
+  border-radius: 1rem;
+  /* keeps spacing(white-space) of text through any state */
+  white-space: pre-wrap;
+
+  /* prevents text overflow */
+  overflow-wrap: break-word;
+  /**/
 }
 
-.new textarea {
+.add-note textarea {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -130,18 +160,18 @@ h1 {
 }
 
 /* focus-while inside element */
-.new textarea:focus {
+.add-note textarea:focus {
   outline: none;
 }
 
-.new button {
+.add-note button {
   border: none;
   background-color: rgb(55, 172, 245);
   padding: 6px 13px;
   border-radius: 15px;
 }
 
-.new button:hover {
+.add-note button:hover {
   background-color: rgba(55, 172, 245, 0.7);
   cursor: pointer;
 }
@@ -150,10 +180,12 @@ h1 {
 .dark-mode {
   background-color: rgb(30, 29, 29);
   height: 100%;
+  transition: background-color 1s ease-in-out;
 }
 
 .dark-mode h1 {
   color: white;
+  transition: color 1s ease-in-out;
 }
 
 .color-btn {

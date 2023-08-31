@@ -24,7 +24,7 @@ const AddNote = ({ handleAddNote }: any) => {
 
   return (
     //reusing note class for quick styling
-    <div className="note new">
+    <div className="add-note">
       {/* textarea input for new notes */}
       <textarea
         //   numbers must be wrapped in {} not ""
@@ -36,7 +36,7 @@ const AddNote = ({ handleAddNote }: any) => {
         value={noteText}
       ></textarea>
       {/* sectioing inside component container */}
-      <div className="note-footer new-footer">
+      <div className="add-footer">
         <small>{remainingChars} Remaining</small>
         <button onClick={handleSaveClick}>Save</button>
       </div>
